@@ -1,6 +1,7 @@
  public class Bike implements CarbonFootprint {
     private double yearlyMiles;
     private static final int caloriesPerMile = 34;
+    private static final double co2KgPerCalorie = 0.02;
 
     //constructor
     public Bike( double miles ){
@@ -23,7 +24,7 @@
 
     @Override
     public double getCarbonFootprint(){
-        return yearlyMiles * caloriesPerMile;
+        return yearlyMiles * caloriesPerMile * co2KgPerCalorie;
     }
 
 }
